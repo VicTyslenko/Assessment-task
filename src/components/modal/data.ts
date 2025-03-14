@@ -22,3 +22,8 @@ export const batteryData = [
   { time: "11:40", battery: 20 },
   { time: "11:45", battery: 10 },
 ];
+
+export const fadeInOut = {
+  hidden: { opacity: 0, transition: { duration: 0.3 } },
+  visible: { opacity: 1, transition: { duration: 1 } },
+};

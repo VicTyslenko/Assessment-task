@@ -2,7 +2,7 @@ import * as S from "./styles";
 
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import { motion } from "framer-motion";
-
+import { fadeInOut } from "./data";
 // mocking data //
 
 import { batteryData } from "./data";
@@ -15,12 +15,6 @@ type Props = {
 };
 
 export const Modal = ({ open, handleClose }: Props) => {
-  const fadeInOut = {
-    hidden: { opacity: 0, transition: { duration: 0.3 } },
-    visible: { opacity: 1, transition: { duration: 1 } },
-  };
-
-  
   /// Below is an example how to monitor a real battery data from the current device ///
 
   // const [batteryHistory, setBatteryHistory] = useState<{ time: string; battery: number }[]>([]);

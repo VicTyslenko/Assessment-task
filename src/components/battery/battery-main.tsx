@@ -27,16 +27,13 @@ export const BatteryMain = ({ handleOpen }: Props) => {
         setInfo((prev) => ({
           ...prev!,
           charging: battery.charging,
-          level: battery.level,
         }));
       };
 
       battery.addEventListener("chargingchange", updateChargingStatus);
-      battery.addEventListener("levelchange", updateChargingStatus);
 
       return () => {
         battery.removeEventListener("chargingchange", updateChargingStatus);
-        battery.removeEventListener("levelchange", updateChargingStatus);
       };
     });
   }, []);
